@@ -8,24 +8,33 @@
 	<!-- <link rel="shortcut icon" href="/img/weather.png" type="image/x-icon">
 	<link rel="stylesheet" href="/css/styles.css" /> -->
 	<title>Weather</title>
+	<style>
+		fieldset{
+			padding: 5%;
+			text-align: center;
+		}
+		input {
+			width: 70%;
+		}
+	</style>
 </head>
 
 <body>
 	<div class="container">
 		<fieldset>
-		  <form action="/" method="post">
-			<input name="city" type="text" class="ghost-input" placeholder="Enter the name of a place" required>
-			<input type="submit" class="ghost-button" value="Get Weather">
-		  </form>
-		  <% if(weather !== null){ %>
+			<form action="/" method="post">
+				<input name="city" type="text" class="ghost-input" placeholder="Enter the name of a place" required>
+				<input type="submit" class="ghost-button" value="Get Weather">
+			</form>
+			<% if(weather !== null){ %>
 			<p><%= weather %></p>
-		  <% } %>
-  
-		  <% if(error !== null){ %>
+			<% } %>
+
+			<% if(error !== null){ %>
 			<p><%= error %></p>
-		  <% } %>
+			<% } %>
 		</fieldset>
-	  </div>
+	</div>
 </body>
 
 </html>
